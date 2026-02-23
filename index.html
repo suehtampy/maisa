@@ -1,49 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<title>Para Você ❤️</title>
-<style>
-body {
-  background: linear-gradient(black, #1a001a);
-  color: white;
-  text-align: center;
-  font-family: Arial;
-}
-
-h1 {
-  color: hotpink;
-  margin-top: 50px;
-}
-
-button {
-  background: hotpink;
-  border: none;
-  padding: 15px;
-  color: white;
-  font-size: 18px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  background: purple;
-  transform: scale(1.1);
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mood Reader | Para o meu amor</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="container">
+        <h1>📚 The Mood Reader</h1>
+        <p class="subtitle">Oi amor, como você quer se sentir na leitura de hoje?</p>
 
-<h1>Você é minha música favorita 🎶</h1>
+        <div class="input-group">
+            <input type="text" id="moodInput" placeholder="Ex: Quero algo leve para relaxar...">
+            <button onclick="getRecommendation()" id="btnSuggest">Pedir sugestão</button>
+        </div>
 
-<p>Assim como a Nessa canta sobre sentimentos profundos,
-eu sinto algo muito mais profundo por você.</p>
+        <div id="loader" class="hidden">Consultando as estrelas (e a IA)... ✨</div>
 
-<button onclick="('Eu te amo mais que tudo ❤️')">
-Clique aqui
-</button>
-
+        <div id="result" class="hidden">
+            <div class="card">
+                <h2 id="bookTitle"></h2>
+                <p id="recommendationLetter"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
